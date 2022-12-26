@@ -59,5 +59,11 @@ def test_threes():
     assert 9 == Yatzy.threes(2,3,3,3,2)
     assert 0 == Yatzy.threes(2,1,1,2,1)
 
-
-
+'''
+Test para el método FOURS de la clase Yatzy
+'''
+pytest.mark.fours
+def test_fours():
+    assert 4 == Yatzy.fours(2,3,4,5,6)
+    assert 8 == Yatzy.fours(2,3,4,4,2)
+    assert 0 == Yatzy.fours(1,3,4,5,6)
