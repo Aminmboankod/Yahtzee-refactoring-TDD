@@ -66,7 +66,8 @@ class Yatzy:
         if (d5 == 3):
              s += 3
         return s
-    
+
+    @staticmethod
     def fours(*dice):
         sum = 0
         for at in dice:
@@ -74,7 +75,7 @@ class Yatzy:
                 sum += 4
         return sum
     
-
+    @staticmethod
     def fives(*dice):
         sum = 0
         for at in dice:
@@ -82,14 +83,14 @@ class Yatzy:
                 sum += 5
         return sum
     
-
-    def sixes(self):
+    @staticmethod
+    def sixes(*dice):
         sum = 0
-        for at in range(len(self.dice)): 
-            if (self.dice[at] == 6):
-                sum = sum + 6
+        for at in dice:
+            if (at == 6):
+                sum += 6
         return sum
-    
+
     @staticmethod
     def score_pair( d1,  d2,  d3,  d4,  d5):
         counts = [0]*6

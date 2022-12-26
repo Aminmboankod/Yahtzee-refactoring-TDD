@@ -77,3 +77,12 @@ def test_fives():
     assert 5 == Yatzy.fives(2,3,4,5,6)
     assert 15 == Yatzy.fives(2,3,5,5,5)
     assert 0 == Yatzy.fives(2,2,2,2,2)
+
+'''
+Test para el método SIXES de la clase Yatzy
+'''
+pytest.mark.sixes
+def test_sixes():
+    assert 6 == Yatzy.sixes(2,3,4,5,6)
+    assert 18 == Yatzy.sixes(2,3,6,6,6)
+    assert 0 == Yatzy.sixes(2,2,2,2,2)
