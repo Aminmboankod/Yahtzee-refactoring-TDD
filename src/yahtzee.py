@@ -75,13 +75,12 @@ class Yatzy:
         return sum
     
 
-    def fives(self):
-        s = 0
-        i = 0
-        for i in range(len(self.dice)): 
-            if (self.dice[i] == 5):
-                s = s + 5
-        return s
+    def fives(*dice):
+        sum = 0
+        for at in dice:
+            if (at == 5):
+                sum += 5
+        return sum
     
 
     def sixes(self):
