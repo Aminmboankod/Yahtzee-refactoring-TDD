@@ -86,3 +86,12 @@ def test_sixes():
     assert 6 == Yatzy.sixes(2,3,4,5,6)
     assert 18 == Yatzy.sixes(2,3,6,6,6)
     assert 0 == Yatzy.sixes(2,2,2,2,2)
+
+'''
+Test para el método SCORE PAIR de la clase Yatzy
+'''
+pytest.mark.score_pair
+def test_score_pair():
+    assert 8 == Yatzy.score_pair(3,3,3,4,4)
+    assert 0 == Yatzy.score_pair(1,2,3,4,5)
+    assert 6 == Yatzy.score_pair(3,3,1,2,1)
