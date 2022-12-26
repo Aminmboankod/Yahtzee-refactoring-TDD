@@ -7,6 +7,11 @@ from src.yahtzee import Yatzy
 # Chance
 # The player scores the sum of all dice, no matter what they read.
 
+
+'''
+Test para el método CHANCE de la clase Yatzy
+'''
+
 @pytest.mark.chance
 def test_chance():
     # iterar sobre *args evita codigo cableado a 5 argumentos
@@ -14,6 +19,11 @@ def test_chance():
     assert 14 == Yatzy.chance(1, 1, 3, 3, 6)
     assert 21 == Yatzy.chance(4, 5, 5, 6, 1)
 
+
+
+'''
+Test para el método YAHTZEE de la clase Yatzy
+'''
 @pytest.mark.yahtzee_bonus
 def test_yahtzee():
     bonus = [1,1,1,1,1]
@@ -27,3 +37,19 @@ def test_failyahtzee():
     assert 0 == Yatzy.yahtzee(nonbonus)
     nonbonus = [3,1,1,2,1]
     assert 0 == Yatzy.yahtzee(nonbonus)
+
+
+'''
+Test para el método ONES de la clase Yatzy
+'''
+
+@pytest.mark.ones
+def test_ones():
+    assert 2 == Yatzy.ones(5,4,3,1,1)
+    assert 5 == Yatzy.ones(1,1,1,1,1)
+    assert 0 == Yatzy.ones(2,4,2,5,6)
+
+
+
+
+
