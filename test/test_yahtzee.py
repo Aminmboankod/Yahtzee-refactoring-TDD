@@ -1,6 +1,3 @@
-'''
-En este fichero escribiré los casos test que se vayan planteando posteriores a la lectura y comprensión del juego y las funciones de cada rutina.
-'''
 import pytest
 from src.yahtzee import Yatzy
 
@@ -11,13 +8,13 @@ from src.yahtzee import Yatzy
 '''
 Test para el método CHANCE de la clase Yatzy
 '''
-
 @pytest.mark.chance
 def test_chance():
     # iterar sobre *args evita codigo cableado a 5 argumentos
     assert 15 == Yatzy.chance(1, 2, 3, 4, 5)
     assert 14 == Yatzy.chance(1, 1, 3, 3, 6)
     assert 21 == Yatzy.chance(4, 5, 5, 6, 1)
+
 
 
 
@@ -39,10 +36,11 @@ def test_failyahtzee():
     assert 0 == Yatzy.yahtzee(nonbonus)
 
 
+
+
 '''
 Test para el método ONES de la clase Yatzy
 '''
-
 @pytest.mark.ones
 def test_ones():
     assert 2 == Yatzy.ones(5,4,3,1,1)
@@ -52,4 +50,14 @@ def test_ones():
 
 
 
+'''
+Test para el método TWOS de la clase Yatzy
+'''
+pytest.mark.twos
+def test_twos():
+    assert 2 == Yatzy.twos(2,1,1,3,4)
+    assert 8 == Yatzy.twos(2,1,2,2,2)
+    assert 0 == Yatzy.twos(1,4,4,6,7)
+
+    
 
