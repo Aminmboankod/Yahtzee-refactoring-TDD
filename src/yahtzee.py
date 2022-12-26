@@ -67,19 +67,10 @@ class Yatzy:
              s += 3
         return s
     
-
-    def __init__(self, d1, d2, d3, d4, _5):
-        self.dice = [0]*5
-        self.dice[0] = d1
-        self.dice[1] = d2
-        self.dice[2] = d3
-        self.dice[3] = d4
-        self.dice[4] = _5
-    
-    def fours(self):
+    def fours(*dice):
         sum = 0
-        for at in range(5):
-            if (self.dice[at] == 4): 
+        for at in dice:
+            if (at == 4): 
                 sum += 4
         return sum
     
@@ -228,3 +219,4 @@ class Yatzy:
             return _2_at * 2 + _3_at * 3
         else:
             return 0
+
