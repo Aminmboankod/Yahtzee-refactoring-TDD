@@ -11,13 +11,10 @@ class Yatzy:
         return d1 + d2 + d3 + d4 + d5
 
     @staticmethod
-    def yahtzee(dice):
-        counts = [0]*(len(dice)+1)
-        for die in dice:
-            counts[die-1] += 1
-        for i in range(len(counts)):
-            if counts[i] == 5:
-                return 50
+    def yahtzee(*dice):
+        
+        if len(set(dice)) == 1:
+            return 50
         return 0
     
     @staticmethod
@@ -219,4 +216,6 @@ class Yatzy:
             return _2_at * 2 + _3_at * 3
         else:
             return 0
+if __name__=="__main__":
 
+    Yatzy.yahtzee(2,2,2,2,2)
