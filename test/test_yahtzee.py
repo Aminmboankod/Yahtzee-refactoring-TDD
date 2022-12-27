@@ -104,3 +104,11 @@ def test_two_pair():
     assert 8 == Yatzy.two_pair(1,1,2,3,3)
     assert 0 == Yatzy.two_pair(1,1,2,3,4)
 
+'''
+Test para el método THREE OF A KIND de la clase Yatzy
+'''
+pytest.mark.three_of_kind
+def test_three_of_kind():
+    assert 9 == Yatzy.three_of_a_kind(3,3,3,4,5)
+    assert 0 == Yatzy.three_of_a_kind(3,3,4,5,6)
+    
