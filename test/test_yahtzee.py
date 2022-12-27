@@ -95,3 +95,12 @@ def test_score_pair():
     assert 8 == Yatzy.score_pair(3,3,3,4,4)
     assert 0 == Yatzy.score_pair(1,2,3,4,5)
     assert 6 == Yatzy.score_pair(3,3,1,2,1)
+
+'''
+Test para el método TWO PAIR de la clase Yatzy
+'''
+pytest.mark.two_pair
+def test_two_pair():
+    assert 8 == Yatzy.two_pair(1,1,2,3,3)
+    assert 0 == Yatzy.two_pair(1,1,2,3,4)
+
