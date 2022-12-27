@@ -7,12 +7,11 @@
 class Yatzy:
 
     @staticmethod
-    def chance(d1, d2, d3, d4, d5):
-        return d1 + d2 + d3 + d4 + d5
+    def chance(*dice):
+        return sum(dice)
 
     @staticmethod
     def yahtzee(*dice):
-        
         if len(set(dice)) == 1:
             return 50
         return 0
@@ -216,6 +215,3 @@ class Yatzy:
             return _2_at * 2 + _3_at * 3
         else:
             return 0
-if __name__=="__main__":
-
-    Yatzy.yahtzee(2,2,2,2,2)
