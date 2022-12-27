@@ -111,4 +111,12 @@ pytest.mark.three_of_kind
 def test_three_of_kind():
     assert 9 == Yatzy.three_of_a_kind(3,3,3,4,5)
     assert 0 == Yatzy.three_of_a_kind(3,3,4,5,6)
+
+'''
+Test para el método FOUR OF A KIND de la clase Yatzy
+'''
+pytest.mark.four_of_kind
+def test_four_of_kind():
+    assert 8 == Yatzy.four_of_a_kind(2,2,2,2,5)
+    assert 0 == Yatzy.four_of_a_kind(2,2,2,4,4)
     
