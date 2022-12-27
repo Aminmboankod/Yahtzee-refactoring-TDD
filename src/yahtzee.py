@@ -17,73 +17,52 @@ class Yatzy:
         return 0
     
     @staticmethod
-    def ones( d1,  d2,  d3,  d4,  d5):
+    def ones(*dice):
         sum = 0
-        if (d1 == 1):
-            sum += 1
-        if (d2 == 1):
-            sum += 1
-        if (d3 == 1):
-            sum += 1
-        if (d4 == 1):
-            sum += 1
-        if (d5 == 1): 
-            sum += 1
-
+        for i in dice:
+            if i == 1:
+                sum += 1
         return sum
     
 
     @staticmethod
-    def twos( d1,  d2,  d3,  d4,  d5):
+    def twos(*dice):
         sum = 0
-        if (d1 == 2):
-             sum += 2
-        if (d2 == 2):
-             sum += 2
-        if (d3 == 2):
-             sum += 2
-        if (d4 == 2):
-             sum += 2
-        if (d5 == 2):
-             sum += 2
+        for i in dice:
+            if i == 2:
+                sum += 2
         return sum
+
     
     @staticmethod
-    def threes( d1,  d2,  d3,  d4,  d5):
-        s = 0
-        if (d1 == 3):
-             s += 3
-        if (d2 == 3):
-             s += 3
-        if (d3 == 3):
-             s += 3
-        if (d4 == 3):
-             s += 3
-        if (d5 == 3):
-             s += 3
-        return s
+    def threes(*dice):
+        sum = 0
+        for i in dice:
+            if i == 3:
+                sum += 3
+        return sum
 
     @staticmethod
     def fours(*dice):
         sum = 0
-        for at in dice:
-            if (at == 4): 
+        for i in dice:
+            if i == 4:
                 sum += 4
         return sum
     
     @staticmethod
     def fives(*dice):
         sum = 0
-        for at in dice:
-            if (at == 5):
+        for i in dice:
+            if i == 5:
                 sum += 5
         return sum
     
     @staticmethod
     def sixes(*dice):
         sum = 0
-        for at in dice:
-            if (at == 6):
+        for i in dice:
+            if i == 6:
                 sum += 6
         return sum
 
