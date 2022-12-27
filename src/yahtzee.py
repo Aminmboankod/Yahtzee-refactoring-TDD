@@ -8,16 +8,10 @@ class Yatzy:
 
     @staticmethod
     def chance(d1, d2, d3, d4, d5):
-        total = 0
-        total += d1
-        total += d2
-        total += d3
-        total += d4
-        total += d5
-        return total
+        return d1 + d2 + d3 + d4 + d5
 
     @staticmethod
-    def yatzy(dice):
+    def yahtzee(dice):
         counts = [0]*(len(dice)+1)
         for die in dice:
             counts[die-1] += 1
@@ -72,40 +66,31 @@ class Yatzy:
         if (d5 == 3):
              s += 3
         return s
-    
 
-    def __init__(self, d1, d2, d3, d4, _5):
-        self.dice = [0]*5
-        self.dice[0] = d1
-        self.dice[1] = d2
-        self.dice[2] = d3
-        self.dice[3] = d4
-        self.dice[4] = _5
-    
-    def fours(self):
+    @staticmethod
+    def fours(*dice):
         sum = 0
-        for at in range(5):
-            if (self.dice[at] == 4): 
+        for at in dice:
+            if (at == 4): 
                 sum += 4
         return sum
     
-
-    def fives(self):
-        s = 0
-        i = 0
-        for i in range(len(self.dice)): 
-            if (self.dice[i] == 5):
-                s = s + 5
-        return s
-    
-
-    def sixes(self):
+    @staticmethod
+    def fives(*dice):
         sum = 0
-        for at in range(len(self.dice)): 
-            if (self.dice[at] == 6):
-                sum = sum + 6
+        for at in dice:
+            if (at == 5):
+                sum += 5
         return sum
     
+    @staticmethod
+    def sixes(*dice):
+        sum = 0
+        for at in dice:
+            if (at == 6):
+                sum += 6
+        return sum
+
     @staticmethod
     def score_pair( d1,  d2,  d3,  d4,  d5):
         counts = [0]*6
@@ -234,3 +219,4 @@ class Yatzy:
             return _2_at * 2 + _3_at * 3
         else:
             return 0
+
