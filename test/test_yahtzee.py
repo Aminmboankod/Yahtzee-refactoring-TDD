@@ -127,3 +127,12 @@ pytest.mark.smallStraight
 def test_smallStraight():
     assert 15 == Yatzy.smallStraight(1,2,3,4,5)
     assert 0 == Yatzy.smallStraight(1,3,4,6,3)
+
+'''
+Test para el método SMALLSTRAIGHT de la clase Yatzy
+'''
+pytest.mark.largeStraight
+def test_largeStraight():
+    assert 20 == Yatzy.largeStraight(2,3,4,5,6)
+    assert 0 == Yatzy.largeStraight(1,2,4,5,1)
+
