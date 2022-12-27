@@ -119,4 +119,11 @@ pytest.mark.four_of_kind
 def test_four_of_kind():
     assert 8 == Yatzy.four_of_a_kind(2,2,2,2,5)
     assert 0 == Yatzy.four_of_a_kind(2,2,2,4,4)
-    
+
+'''
+Test para el método SMALLSTRAIGHT de la clase Yatzy
+'''
+pytest.mark.smallStraight
+def test_smallStraight():
+    assert 15 == Yatzy.smallStraight(1,2,3,4,5)
+    assert 0 == Yatzy.smallStraight(1,3,4,6,3)
