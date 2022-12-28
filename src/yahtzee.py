@@ -1,8 +1,3 @@
-'''
-    Código que nos ha aportado nuestro tutor y que debemos refactorizar y testear
-'''
-
-
 
 class Yatzy:
 
