@@ -132,34 +132,12 @@ class Yatzy:
     
 
     @staticmethod
-    def fullHouse( d1,  d2,  d3,  d4,  d5):
-        tallies = []
-        _2 = False
-        i = 0
-        _2_at = 0
-        _3 = False
-        _3_at = 0
-
-        tallies = [0]*6
-        tallies[d1-1] += 1
-        tallies[d2-1] += 1
-        tallies[d3-1] += 1
-        tallies[d4-1] += 1
-        tallies[d5-1] += 1
-
-        for i in range(6):
-            if (tallies[i] == 2): 
-                _2 = True
-                _2_at = i+1
-            
-
-        for i in range(6):
-            if (tallies[i] == 3): 
-                _3 = True
-                _3_at = i+1
-            
-
-        if (_2 and _3):
-            return _2_at * 2 + _3_at * 3
+    def fullHouse(*dice):
+        if Yatzy.score_pair(*dice) and Yatzy.three_of_a_kind(*dice):
+            return Yatzy.score_pair(*dice) + Yatzy.three_of_a_kind(*dice)
         else:
             return 0
+        
+Yatzy.fullHouse(1,1,2,2,2)
+Yatzy.fullHouse(2,2,3,3,4)
+Yatzy.fullHouse(4,4,4,4,4)
