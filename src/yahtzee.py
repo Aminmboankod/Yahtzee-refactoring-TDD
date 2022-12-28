@@ -113,7 +113,3 @@ class Yatzy:
             return Yatzy.score_pair(*dice) + Yatzy.three_of_a_kind(*dice)
         else:
             return 0
-        
-Yatzy.fullHouse(1,1,2,2,2)
-Yatzy.fullHouse(2,2,3,3,4)
-Yatzy.fullHouse(4,4,4,4,4)
