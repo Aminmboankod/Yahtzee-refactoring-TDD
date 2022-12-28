@@ -18,17 +18,13 @@ Test para el método YAHTZEE de la clase Yatzy
 '''
 @pytest.mark.yahtzee_bonus
 def test_yahtzee():
-    bonus = [1,1,1,1,1]
-    assert 50 == Yatzy.yahtzee(bonus)
-    bonus = [6,6,6,6,6]
-    assert 50 == Yatzy.yahtzee(bonus)
+    assert 50 == Yatzy.yahtzee(1,1,1,1,1)
+    assert 50 == Yatzy.yahtzee(6,6,6,6,6)
 
 @pytest.mark.yahtzee_nonbonus
 def test_failyahtzee():
-    nonbonus = [1,1,1,2,1]
-    assert 0 == Yatzy.yahtzee(nonbonus)
-    nonbonus = [3,1,1,2,1]
-    assert 0 == Yatzy.yahtzee(nonbonus)
+    assert 0 == Yatzy.yahtzee(1,1,1,2,1)
+    assert 0 == Yatzy.yahtzee(3,1,1,2,1)
 
 
 '''
