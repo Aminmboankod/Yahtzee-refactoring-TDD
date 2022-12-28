@@ -114,20 +114,12 @@ class Yatzy:
     
 
     @staticmethod
-    def smallStraight( d1,  d2,  d3,  d4,  d5):
-        tallies = [0]*6
-        tallies[d1-1] += 1
-        tallies[d2-1] += 1
-        tallies[d3-1] += 1
-        tallies[d4-1] += 1
-        tallies[d5-1] += 1
-        if (tallies[0] == 1 and
-            tallies[1] == 1 and
-            tallies[2] == 1 and
-            tallies[3] == 1 and
-            tallies[4] == 1):
-            return 15
-        return 0
+    def smallStraight(*dice):
+        for num in range(1,6):
+            count = dice.count(num)
+            if count != 1:
+                return 0
+        return 15
     
 
     @staticmethod
