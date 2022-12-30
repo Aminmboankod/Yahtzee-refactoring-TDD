@@ -1,4 +1,7 @@
 # Yahtzee-refactoring-TDD
+-------------------------
+![Yatzy](/images/yahtzee.jpg)
+-------------------------
 The following repository is an activity of the upper level of web application development in which it is a question of designing a program that allows playing Yahtzee strictly complying with the rules of the game. The development of the same is carried out from development directed by test (TDD)
 
 
