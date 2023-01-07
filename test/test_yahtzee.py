@@ -25,7 +25,7 @@ def test_failyahtzee():
     assert 0 == Yatzy.yahtzee(3,1,1,2,1)
 
 '''
-Test para el método ONES de la clase Yatzy
+Test para el método ONES de la clasºe Yatzy
 '''
 @pytest.mark.ones
 def test_ones():
