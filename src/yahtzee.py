@@ -1,3 +1,4 @@
+from src.categories import category
 
 class Yatzy:
 
@@ -13,29 +14,35 @@ class Yatzy:
     
     @staticmethod
     def ones(*dice):
-        return dice.count(1)*1
+        ONE = category.ONE.value
+        return dice.count(ONE) * ONE
     
 
     @staticmethod
     def twos(*dice):
-        return dice.count(2)*2
+        TWO = category.TWO.value
+        return dice.count(TWO) * TWO
 
     
     @staticmethod
     def threes(*dice):
-        return dice.count(3)*3
+        THREE = category.THREE.value
+        return dice.count(THREE) * THREE
 
     @staticmethod
     def fours(*dice):
-        return dice.count(4)*4
+        FOUR = category.FOUR.value
+        return dice.count(FOUR) * FOUR
     
     @staticmethod
     def fives(*dice):
-        return dice.count(5)*5
+        FIVE = category.FIVE.value
+        return dice.count(FIVE) * FIVE
     
     @staticmethod
     def sixes(*dice):
-        return dice.count(6)*6
+        SIX = category.SIX.value
+        return dice.count(SIX) * SIX
 
     @staticmethod
     def score_pair(*dice):
